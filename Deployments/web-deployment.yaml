@@ -9,7 +9,7 @@ metadata:
     io.kompose.service: web
   name: web
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       io.kompose.service: web
@@ -24,7 +24,7 @@ spec:
         io.kompose.service: web
     spec:
       containers:
-      - image: web
+      - image: lexslimx/kubewebapp:v1
         imagePullPolicy: ""
         name: web
         ports:
